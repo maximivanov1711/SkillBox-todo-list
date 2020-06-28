@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Reset css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- jQuery js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Custom js -->
+    <script src="js/script.js"></script>
+
+    <title>TODO list</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="content">
+          <div class="column-left">
+            <h2>Список дел</h2>
+            <ul class="todo-list">
+            
+            </ul>
+          </div>
+          <div class="column-right">
+            <h2>Добавить новую задачу</h2>
+            <div class="add-todo-container" action="post">
+              <label for="todo-title-form">* Название</label>
+              <input type="text" name="todo-title-form" id="todo-title-form" />
+
+              <label for="todo-desc-form">* Описание</label>
+              <textarea name="todo-desc-form" id="todo-desc-form"></textarea>
+
+              <button class="add-todo-button">Добавить задачу</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

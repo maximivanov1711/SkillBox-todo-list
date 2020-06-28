@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: #eee;
+  font-family: Arial;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.content {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.column-left,
+.column-right {
+  flex: 1;
+}
+
+.column-left {
+  margin-right: 20px;
+}
+
+.column-left h2,
+.column-right h2 {
+  margin-bottom: 30px;
+}
+
+.todo-item {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.todo-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-item.active .todo-header {
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-title {
+  display: inline-block;
+  font-size: 18px;
+}
+
+.todo-delete-button {
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+[class$="button"] img {
+  display: block;
+}
+
+.todo-collapse-button {
+  cursor: pointer;
+  position: relative;
+  transform: rotate(180deg);
+  margin-left: auto;
+  transition: .1s;
+}
+
+.todo-item.active .todo-collapse-button {
+  transform: rotate(0deg);
+}
+
+.todo-body {
+  padding: 20px;
+}
+
+.todo-desc {
+  color: #666;
+}
+
+.add-todo-container {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  font-size: 16px;
+  margin: 10px 0 20px;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  background-color: #fafafa;
+  color: #666;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+}
+
+.add-todo-button {
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #0084ff;
+  color: #fff;
+  transition: .1s;
+}
+
+.add-todo-button:hover {
+  background-color: #0077e6;
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    display: block;
+    padding-top: 0;
+  }
+
+  .column-left,
+  .column-right {
+    width: 100%;
+  }
+}
+
+.todo-list.empty {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
