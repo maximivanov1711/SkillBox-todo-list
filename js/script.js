@@ -16,11 +16,10 @@ $(function () {
   });
 
   $(".todo-list").on("click", ".todo-delete-button", function () {
-    removeItem($(this).parents(".todo-item"))
-      .then(() => {
-        removeItemFromLocalStorage($(this).parents(".todo-item"));
-        updateList();
-      });
+    removeItem($(this).parents(".todo-item")).then(() => {
+      removeItemFromLocalStorage($(this).parents(".todo-item"));
+      updateList();
+    });
   });
 
   $(".todo-list").on("click", ".todo-collapse-button", function () {
@@ -62,7 +61,7 @@ function createItem(title, desc, time) {
 }
 
 function removeItem($item) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     $item.slideUp(100);
     setTimeout(() => {
       $item.remove();
